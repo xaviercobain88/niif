@@ -14,8 +14,9 @@ import xaw.rest_services.infrastructure.exception.UnexpectedPersistenceException
 
 public class GenericRepository<T, PK extends Serializable> {
 
-	public static final int size = 20;
-	public static final int page = 1;
+	public static final int SIZE = 20;
+	public static final int PAGE = 1;
+	public static final int MAZ_SIZE = 100;
 
 	private Class<T> type;
 
@@ -88,6 +89,11 @@ public class GenericRepository<T, PK extends Serializable> {
 			e.printStackTrace();
 			throw new UnexpectedPersistenceException();
 		}
+	}
+
+	public List<T> findByQuery(String jpql, Map<String, Object> parameters)
+			throws UnexpectedPersistenceException {
+		return findByQuery(jpql, parameters, PAGE, MAZ_SIZE);
 	}
 
 }

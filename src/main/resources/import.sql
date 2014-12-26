@@ -16,3 +16,5 @@
 --
 
 -- You can use this file to load seed data into the database using SQL statements
+USE rest_services_db;
+INSERT INTO `rest_services_db`.`license_plan` (`id`, `description`, `price`, `status`, `total_companies`, `total_users`) VALUES ('1', 'Plan Básico', '47', 'ACTIVE', '5', '1');

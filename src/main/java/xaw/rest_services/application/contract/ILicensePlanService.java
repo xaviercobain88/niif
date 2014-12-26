@@ -10,6 +10,6 @@ import xaw.rest_services.application.exception.ServiceException;
 @Local
 public interface ILicensePlanService {
 
-	public List<LicensePlanDTO> findAll() throws ServiceException;
+	public List<LicensePlanDTO> findAvailable() throws ServiceException;
 
 }

@@ -16,7 +16,6 @@ import xaw.rest_services.application.dto.LicensePlanDTO;
 import xaw.rest_services.application.exception.ServiceException;
 import xaw.rest_services.domain.infrastructure_service.ILicensePlanRepository;
 import xaw.rest_services.domain.model.LicensePlan;
-import xaw.rest_services.domain.query_params.LicensePlanQueryParam;
 import xaw.rest_services.infrastructure.exception.UnexpectedPersistenceException;
 
 @Stateless
@@ -27,11 +26,11 @@ public class LicensePlanService implements ILicensePlanService {
 	protected ILicensePlanRepository licensePlanRepository;
 
 	@Override
-	public List<LicensePlanDTO> findAll() throws ServiceException {
+	public List<LicensePlanDTO> findAvailable() throws ServiceException {
 
 		try {
 			List<LicensePlan> licensePlans = licensePlanRepository
-					.findAll(new LicensePlanQueryParam());
+					.findAllActive();
 			List<LicensePlanDTO> licensePlanDTOs = new ArrayList<LicensePlanDTO>();
 
 			if (licensePlans != null && licensePlans.size() > 0) {

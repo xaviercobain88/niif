@@ -50,7 +50,8 @@ public class LicenseResource {
 	public RestApiResponse<List<LicensePlanDTO>> get(UserDTO userDTO) {
 		restApiResponse = new RestApiResponse<>();
 		try {
-			List<LicensePlanDTO> licensePlanDTOs = licensePlanService.findAll();
+			List<LicensePlanDTO> licensePlanDTOs = licensePlanService
+					.findAvailable();
 
 			restApiResponse.setData(licensePlanDTOs);
 

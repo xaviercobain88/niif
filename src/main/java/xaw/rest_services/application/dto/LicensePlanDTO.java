@@ -1,12 +1,18 @@
 package xaw.rest_services.application.dto;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 
-public class LicensePlanDTO {
+public class LicensePlanDTO implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	protected Integer totalUsers;
 	protected Integer totalCompanies;
 	protected BigDecimal price;
 	protected String description;
+	protected Long id;
 
 	public Integer getTotalUsers() {
 		return totalUsers;
@@ -38,6 +44,14 @@ public class LicensePlanDTO {
 
 	public void setDescription(String description) {
 		this.description = description;
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
 	}
 
 }
