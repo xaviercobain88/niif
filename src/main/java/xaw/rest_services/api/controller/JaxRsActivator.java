@@ -40,6 +40,7 @@ public class JaxRsActivator extends Application {
 		// no instance is created, just class is listed
 		classes.add(UserResource.class);
 		classes.add(LicenseResource.class);
+		classes.add(StatementStructureResource.class);
 	}
 
 	@Override

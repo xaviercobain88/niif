@@ -22,11 +22,6 @@ public class LicensePlan implements Serializable{
 	@Id
 	@GeneratedValue
 	protected Long id;
-//
-//	@ManyToMany
-//	@JoinTable(name = "license_user", joinColumns = { @JoinColumn(name = "license_id", referencedColumnName = "id") }, inverseJoinColumns = { @JoinColumn(name = "user_id", referencedColumnName = "id") })
-//	protected List<User> users;
-
 	protected Integer totalUsers;
 	protected Integer totalCompanies;
 	protected BigDecimal price;

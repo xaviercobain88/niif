@@ -1,34 +1,31 @@
 package xaw.rest_services.application.dto;
 
 import java.io.Serializable;
-import java.math.BigDecimal;
 
-public class LicensePlanDTO implements Serializable {
+public class CompanyDTO implements Serializable {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	protected Integer totalCompanies;
-	protected BigDecimal price;
+	protected String name;
+	protected String identification;
 	protected String description;
 	protected Long id;
-	
 
-
-	public Integer getTotalCompanies() {
-		return totalCompanies;
+	public String getName() {
+		return name;
 	}
 
-	public void setTotalCompanies(Integer totalCompanies) {
-		this.totalCompanies = totalCompanies;
+	public void setName(String name) {
+		this.name = name;
 	}
 
-	public BigDecimal getPrice() {
-		return price;
+	public String getIdentification() {
+		return identification;
 	}
 
-	public void setPrice(BigDecimal price) {
-		this.price = price;
+	public void setIdentification(String identification) {
+		this.identification = identification;
 	}
 
 	public String getDescription() {
@@ -46,7 +43,5 @@ public class LicensePlanDTO implements Serializable {
 	public void setId(Long id) {
 		this.id = id;
 	}
-
-	
 
 }

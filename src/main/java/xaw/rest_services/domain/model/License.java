@@ -13,11 +13,27 @@ public class License {
 	@GeneratedValue
 	protected Long id;
 	@ManyToOne
-	@JoinColumn(name = "license_id")
-	protected LicensePlan license;
+	@JoinColumn(name = "license_plan_id")
+	protected LicensePlan licensePlan;
 
-	@ManyToOne
-	@JoinColumn(name = "user_id")
-	protected User user;
+	protected Integer usedCompanies;
+	protected Integer usedUsers;
 
+	public LicensePlan getLicensePlan() {
+		return licensePlan;
+	}
+
+	public Integer getUsedCompanies() {
+		return usedCompanies;
+	}
+
+	public Integer getUsedUsers() {
+		return usedUsers;
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	
 }

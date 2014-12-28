@@ -12,7 +12,7 @@ public interface ILicensePlanRepository extends
 	List<LicensePlan> findAll(StatusEnum status)
 			throws UnexpectedPersistenceException;
 
-	public List<LicensePlan> findAllActive()
+	List<LicensePlan> findAllActive()
 			throws UnexpectedPersistenceException;
 
 }
